@@ -37,7 +37,7 @@ public final class JsonUtil {
     }
 
     public static void toString(Object input, File output) throws IOException {
-        jsonMapper.writeValue(output, input);
+        jsonMapper.writerWithDefaultPrettyPrinter().writeValue(output, input);
     }
 
     public static void printObject(Object input) throws JsonProcessingException {
